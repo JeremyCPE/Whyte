@@ -68,18 +68,18 @@ function SongSection() {
                 className={"md:w-[31%] w-[91%] flex-shrink-0 flex justify-center"}
                 >
                   <div className="relative group">
-                  <a className="absolute inset-0 bg-black/50 opacity-0 cursor-pointer hover:opacity-100 flex items-center justify-center transition-opacity" 
-                    href={release.link} target="_blank">
-                  
-                  <div className="text-white text-lg font-bold items-center flex flex-col space-y-10" > 
-                    <Music2 className="flex w-8 h-8 animate-wiggle"/> {release.title}  <p> Click to listen ! </p>
-                  </div>
-                  </a>
-                  <img 
-                  src={release.src}
-                  alt={release.title}
-                  className="w-full h-full aspect-square">
-                  </img>
+                    <a className="absolute inset-0 bg-black/50 opacity-0 cursor-pointer hover:opacity-100 flex items-center justify-center transition-opacity" 
+                      href={release.link} target="_blank">
+                    
+                    <div className="text-white text-lg font-bold items-center flex flex-col space-y-10" > 
+                      <Music2 className="flex w-8 h-8 animate-wiggle"/> {release.title}  <p> Click to listen ! </p>
+                    </div>
+                    </a>
+                    <img 
+                    src={release.src}
+                    alt={release.title}
+                    className="w-full h-full aspect-square">
+                    </img>
                 </div>
                 </div>
               ))}

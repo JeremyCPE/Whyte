@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 
 function VideoThumbnails({ videos, currentIndex, onSelect }) {
 
@@ -19,19 +19,23 @@ function VideoThumbnails({ videos, currentIndex, onSelect }) {
       {[...videos, ...videos, ...videos].map((video, index) => (
         <div 
           key={index} 
-          className={`min-w-[33.33%] aspect-video relative group cursor-pointer flex transition-transform duration-500 ease-in-out 
-            ring-10 ring-[#cc4414] ring-offset-2 rounded-lg`}
+          className="min-w-[33.33%] aspect-video flex transition-transform duration-500 ease-in-out relative group"
           onClick={() => onSelect(index % videos.length)}
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
-          <img 
-            src={"https://img.youtube.com/vi/" + video.id + "/0.jpg"}
-            alt={video.title}
-            className="w-full h-full object-cover rounded-lg shadow-md transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-        </div>
+                  <span className="absolute inset-0 bg-black/50 opacity-0 cursor-pointer group-hover:opacity-100 flex items-center justify-center transition-opacity" >
+                    <div className=" text-white text-lg font-bold flex">
+                    <Play className="w-8 h-8 animate-wiggle text-lg font-bold items-center flex flex-col "/> 
+                    </div>
+                  </span>
+                  <img 
+                    src={"https://img.youtube.com/vi/" + video.id + "/0.jpg"}
+                    alt={video.title}
+                    className="w-full h-full object-cover rounded-lg shadow-md"
+                  />
+          </div>
       ))}
     </div>
       {/* Navigation Buttons */}
