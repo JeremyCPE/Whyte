@@ -3,7 +3,6 @@ import Hero from './Components/Hero';
 import AlbumShowcase from './Components/AlbumShowcase';
 import SocialLinks from './Components/SocialLinks';
 import BackgroundDecoration from './Components/BackgroundDecoration';
-import DoodleOverlay from './Components/DoodleOverlay';
 import VideoSection from './Components/VideoSection';
 import SongSection from './Components/SongsSection';
 import Header from './Components/Header';
