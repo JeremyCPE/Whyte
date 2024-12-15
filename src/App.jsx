@@ -10,20 +10,20 @@ import Newsletter from './Components/Newsletter';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
+      <BackgroundDecoration />
       <Header/>
       <main>
       <Hero />
       <AlbumShowcase />
       <section className="postion relative min-h-screen py-15 px-6 z-10">
-      <BackgroundDecoration />
       <SongSection />
       <VideoSection/>
       </section>
       <SocialLinks />
       <Newsletter/>
       </main>
-      <footer className="bg-black text-white py-8">
+      <footer className=" text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">© 2024 RekyStudio. All rights reserved.</p>
         </div>

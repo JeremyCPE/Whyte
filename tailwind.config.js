@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         heading: ['"Gloria Hallelujah"', 'cursive'],
         body: ['"Architects Daughter"', 'cursive'],
+        sztempel: ['"SztempelDRom W00 Regular"', 'sans-serif'],
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',

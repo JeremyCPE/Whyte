@@ -1,39 +1,7 @@
 import React from 'react';
-import { Instagram, Twitter, Youtube, Music, Facebook } from 'lucide-react';
+import { socialLinks } from '../Data/socialLinks';
 
 function SocialLinks() {
-  const socialLinks = [
-    {
-      name: 'Spotify',
-      icon: <Music className="w-8 h-8 animate-wiggle" style={{transform: 'rotate(5deg)'}} />,
-      url: 'https://spotify.com',
-      color: 'text-green-600 hover:text-green-700'
-    },
-    {
-      name: 'Instagram',
-      icon: <Instagram className="w-8 h-8 animate-wiggle" style={{transform: 'rotate(5deg)'}} />,
-      url: 'https://instagram.com',
-      color: 'text-pink-600 hover:text-pink-700'
-    },
-    {
-      name: 'X',
-      icon: <Twitter className="w-8 h-8 animate-wiggle"  style={{transform: 'rotate(5deg)'}}/>,
-      url: 'https://twitter.com',
-      color: 'text-blue-600 hover:text-blue-700'
-    },
-    {
-      name: 'YouTube',
-      icon: <Youtube className="w-8 h-8 animate-wiggle" style={{transform: 'rotate(5deg)'}}/>,
-      url: 'https://youtube.com',
-      color: 'text-red-600 hover:text-red-700'
-    },
-    {
-      name: 'Facebook',
-      icon: <Facebook className="w-8 h-8 animate-wiggle" style={{transform: 'rotate(5deg)'}}/>,
-      url: 'https://facebook.com',
-      color: 'text-blue-600 hover:text-blue-700'
-    }
-  ];
 
   return (
     <div className="py-24 px-4">

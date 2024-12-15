@@ -54,7 +54,7 @@ function SongSection() {
 
   
     return (      
-      <div className="max-w-6xl mx-auto">
+      <div className="py-24 max-w-6xl mx-auto">
         <h2 className="font-heading text-4xl font-bold transform -rotate- text-center text-white mb-16">Release</h2>
         <div>
           <div className="relative h-full mx-auto">

@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { Music2,Menu, X} from 'lucide-react';
-import SocialLinks from './SocialLinks';
+import {socialLinks} from '../Data/socialLinks';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,10 +31,23 @@ function Header() {
 
       <nav>
       <div className={('md:hidden', isOpen ? 'block' : 'hidden')} >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black text-white p-4 justify-items-center">
-        <a href="#release" className="hover:text-[#cc4414] transition-colors block px-4 py-4">Release</a>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black text-white p-4 justify-items-center font-heading text-2xl">
+        <a href="#release" className="hover:text-[#cc4414] transition-colors block px-4 py-4 text-lg">Release</a>
         <a href="#video" className="hover:text-[#cc4414] transition-colors block px-4 py-4">Video</a>
-        <SocialLinks></SocialLinks>
+        
+        <div className="flex flex-wrap justify-center gap-8">
+          {socialLinks.map((link, index) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform transition-all duration-300 hover:scale-110"
+            >
+                <div className={link.color}>{link.icon}</div>
+            </a>
+          ))}
+        </div>
         </div>
       </div>
       </nav>

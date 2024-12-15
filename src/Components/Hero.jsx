@@ -13,8 +13,8 @@ function Hero() {
       </div>
       
       <div className="relative container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-2xl">
-          <h1 className="text-5xl font-bold text-white mb-6">Way out available</h1>
+        <div className="max-w-2xl font-bold text-white mb-6 ">
+          <h1 className="text-9xl font-sztempel">WAY OUT</h1>
           <button className="bg-[#cc4414] text-white px-8 py-3 rounded-full flex items-center gap-2 hover:bg-[#a33610] transition-colors">
             <Play className="w-5 h-5" />
             Buy now

@@ -2,47 +2,20 @@ import React from 'react';
 import { Heart, Flower } from 'lucide-react';
 import flower1 from "../assets/flower_1.png";
 import flower2 from "../assets/flower_2.png";
-import RotatingImage from '../Tools/RotatingImage';
+import RotatingImage from '../Anims/RotatingImage';
+import FlowerAnimation from '../Anims/FlowerAnimation';
+import StarAnimation from '../Anims/StarAnimation';
 
 function BackgroundDecoration() {
-  const decorations = Array.from({ length: 20 }).map((_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    rotation: Math.random() * 360,
-    scale: 0.5 + Math.random() * 1,
-    isHeart: Math.random() > 0.5
-  }));
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden -z-1">
-      {decorations.map((decoration) => (
-        <div
-          key={decoration.id}
-          className="absolute animate-pulse"
-          style={{
-            left: `${decoration.x}%`,
-            top: `${decoration.y}%`,
-            transform: `rotate(${decoration.rotation}deg) scale(${decoration.scale})`,
-            transition: 'transform 0.5s ease-in-out',
-            opacity: 0.1
-          }}
-        >
-          {decoration.id%4 == 0 ?
-            (
-            decoration.isHeart ? (
-            <RotatingImage imageUrl = {flower1} altText="flower1"/>
-            ) : (
-            <RotatingImage imageUrl = {flower2} altText="flower1"/>
-          )) : (
-          decoration.isHeart ? (
-            <Heart className="w-8 h-8 text-orange-400" />
-          ) : (
-            <Flower className="w-8 h-8 text-orange-400" />
-            ))}
-        </div>
-      ))}
+    <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+    <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-orange-950/30" />
+    <FlowerAnimation/>
+    <StarAnimation/>
+     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_70%)]" />
     </div>
+    
   );
 }
 
