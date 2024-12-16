@@ -23,15 +23,17 @@ function FlowerBackground() {
       x: x,
       y: y,
     };
+
     setFlowers(prev => {
       if (prev.length >= MAX_FLOWERS) {
-        // Remove the oldest flower(s) and add the new one
         return [...prev.slice(1), newFlower];
       }
-      // Add new flower if under the limit
       return [...prev, newFlower];
     });
-    console.log('Added flower at:', e.clientX, e.clientY);
+
+    setTimeout(() => {
+      setFlowers(prev => prev.filter(f => f.id !== newFlower.id));
+    }, 5000);
   };
 
   return (
