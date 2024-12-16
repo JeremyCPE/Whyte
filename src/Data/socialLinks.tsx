@@ -1,11 +1,11 @@
 import React from 'react';
-import { Instagram, Twitter, Youtube, Music, Facebook, Mail, Apple } from 'lucide-react';
-import { SiSoundcloud, SiApplemusic } from "@icons-pack/react-simple-icons";
+import { Instagram, Twitter, Youtube, Facebook, Mail } from 'lucide-react';
+import { SiSoundcloud, SiApplemusic, SiSpotify } from "@icons-pack/react-simple-icons";
 
 export const socialLinks = [
     {
       name: 'Spotify',
-      icon: <Music className="w-8 h-8"/>,
+      icon: <SiSpotify className="w-8 h-8"/>,
       url: 'https://open.spotify.com/intl-fr/artist/7DZtdN4x13Amjw87cjdffb?dl_branch=1&nd=1&dlsi=cbc67d6397ed4a72',
       color: 'text-green-600 hover:text-green-700'
     },

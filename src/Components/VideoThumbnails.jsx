@@ -14,7 +14,7 @@ function VideoThumbnails({ videos, currentIndex, onSelect }) {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden hidden md:block">
     <div className="flex no-scrollbar">
       {[...videos, ...videos, ...videos].map((video, index) => (
         <div 
